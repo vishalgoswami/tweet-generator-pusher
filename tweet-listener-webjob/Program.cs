@@ -1,24 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Azure.WebJobs;
 using System.Configuration;
-using System.Diagnostics;
 using Tweetinvi;
 using Tweetinvi.Core.Credentials;
+using System.Diagnostics;
 using PusherServer;
 
-
-namespace tweet_generator_console
+namespace tweet_listener_webjob
 {
+    // To learn more about Microsoft Azure WebJobs SDK, please see http://go.microsoft.com/fwlink/?LinkID=320976
     class Program
     {
+        // Please set the following connection strings in app.config for this WebJob to run:
+        // AzureWebJobsDashboard and AzureWebJobsStorage
         private static string[] COMMA = { "," };
-
-        static void Main(string[] args)
+        static void Main()
         {
+            var host = new JobHost();
+            // The following code ensures that the WebJob will be running continuously
             var TWITTERAPPACCESSTOKEN = ConfigurationManager.AppSettings["TWITTERAPPACCESSTOKEN"];
             var TWITTERAPPACCESSTOKENSECRET = ConfigurationManager.AppSettings["TWITTERAPPACCESSTOKENSECRET"];
             var TWITTERAPPAPIKEY = ConfigurationManager.AppSettings["TWITTERAPPAPIKEY"];
@@ -29,25 +32,23 @@ namespace tweet_generator_console
             var pusherAppSecret = ConfigurationManager.AppSettings["PusherAppId"];
             var pusherChannel = ConfigurationManager.AppSettings["PusherAppId"];
             var pusherEvent = ConfigurationManager.AppSettings["PusherAppId"];
-            var pusherConfig = new PusherConfig
-            {
-                AppId = pusherAppId,
-                AppKey = pusherAppKey,
-                AppSecret = pusherAppSecret,
-                Channel = pusherChannel,
-                Event = pusherEvent
+            var pusherConfig = new PusherConfig {
+                 AppId = pusherAppId,
+                 AppKey = pusherAppKey,
+                 AppSecret = pusherAppSecret,
+                 Channel = pusherChannel,
+                 Event = pusherEvent
             };
-
             Auth.SetUserCredentials(TWITTERAPPAPIKEY, TWITTERAPPAPISECRET, TWITTERAPPACCESSTOKEN, TWITTERAPPACCESSTOKENSECRET);
             Auth.ApplicationCredentials = new TwitterCredentials(TWITTERAPPAPIKEY, TWITTERAPPAPISECRET, TWITTERAPPACCESSTOKEN, TWITTERAPPACCESSTOKENSECRET);
             Program p = new Program();
             p.Stream_FilteredStreamExample(trackersKeywords, pusherConfig);
+            host.RunAndBlock();
         }
-
 
         private void Stream_FilteredStreamExample(string trackersKeywords, PusherConfig pusherConfig)
         {
-            var trackersKeywordsList = trackersKeywords.Split(COMMA, StringSplitOptions.RemoveEmptyEntries).ToList();
+            var trackersKeywordsList = trackersKeywords.Split(COMMA,StringSplitOptions.RemoveEmptyEntries).ToList();
             for (; ; )
             {
                 try
@@ -95,6 +96,5 @@ namespace tweet_generator_console
             }
         }
 
-      
     }
 }

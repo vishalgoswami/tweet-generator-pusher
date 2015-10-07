@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tweet-generator-console", "tweet-generator-console\tweet-generator-console.csproj", "{6EBC1DEB-A1A7-4FC4-9738-3B9B17063FBD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tweet-listener-webjob", "tweet-listener-webjob\tweet-listener-webjob.csproj", "{38E00CE3-56E1-465B-961D-7BE784B0A2E8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{6EBC1DEB-A1A7-4FC4-9738-3B9B17063FBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6EBC1DEB-A1A7-4FC4-9738-3B9B17063FBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6EBC1DEB-A1A7-4FC4-9738-3B9B17063FBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38E00CE3-56E1-465B-961D-7BE784B0A2E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38E00CE3-56E1-465B-961D-7BE784B0A2E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38E00CE3-56E1-465B-961D-7BE784B0A2E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38E00CE3-56E1-465B-961D-7BE784B0A2E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
