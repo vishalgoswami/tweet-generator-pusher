@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tweet-generator-console", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tweet-listener-webjob", "tweet-listener-webjob\tweet-listener-webjob.csproj", "{38E00CE3-56E1-465B-961D-7BE784B0A2E8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tweet-webhost", "tweet-webhost\tweet-webhost.csproj", "{FF33ADF0-05C8-4FE8-8E8A-0A4FA92EB788}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{38E00CE3-56E1-465B-961D-7BE784B0A2E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38E00CE3-56E1-465B-961D-7BE784B0A2E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38E00CE3-56E1-465B-961D-7BE784B0A2E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF33ADF0-05C8-4FE8-8E8A-0A4FA92EB788}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF33ADF0-05C8-4FE8-8E8A-0A4FA92EB788}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF33ADF0-05C8-4FE8-8E8A-0A4FA92EB788}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF33ADF0-05C8-4FE8-8E8A-0A4FA92EB788}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

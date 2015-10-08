@@ -1,0 +1,6 @@
+C:\dev\projects\newprj\tweet-generator-pusher\tweet-webhost\bin\tweet-webhost.dll.config
+C:\dev\projects\newprj\tweet-generator-pusher\tweet-webhost\bin\tweet-webhost.dll
+C:\dev\projects\newprj\tweet-generator-pusher\tweet-webhost\bin\tweet-webhost.pdb
+C:\dev\projects\newprj\tweet-generator-pusher\tweet-webhost\obj\Release\tweet-webhost.csprojResolveAssemblyReference.cache
+C:\dev\projects\newprj\tweet-generator-pusher\tweet-webhost\obj\Release\tweet-webhost.dll
+C:\dev\projects\newprj\tweet-generator-pusher\tweet-webhost\obj\Release\tweet-webhost.pdb

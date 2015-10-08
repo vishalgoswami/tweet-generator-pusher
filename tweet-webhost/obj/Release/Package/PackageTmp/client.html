@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<head>
+  <title>Pusher Test</title>
+  <script src="https://js.pusher.com/3.0/pusher.min.js"></script>
+  <script>
+    //Enable pusher logging - don't include this in production
+    Pusher.log = function(message) {
+        if (window.console && window.console.log) {
+            window.console.log(message);
+        }
+    };
+    var pusher = new Pusher('8acc66b3c701002c5458', {
+        encrypted: true
+    });
+    var channel = pusher.subscribe('trueiq-channel-1');
+    channel.bind('twitter-event', function(data) {
+        // bind your UI element here.
+        alert(data.Text);
+    });
+</script>
+</head>
